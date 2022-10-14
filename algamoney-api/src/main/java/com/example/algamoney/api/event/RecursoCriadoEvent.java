@@ -22,5 +22,4 @@ public class RecursoCriadoEvent extends ApplicationEvent {
 	public Long getCodigo() {
 		return codigo;
 	}
-
 }

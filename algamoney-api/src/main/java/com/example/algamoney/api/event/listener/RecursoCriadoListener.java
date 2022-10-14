@@ -3,7 +3,6 @@ package com.example.algamoney.api.event.listener;
 import java.net.URI;
 
 import javax.servlet.http.HttpServletResponse;
-
 import org.springframework.context.ApplicationListener;
 import org.springframework.stereotype.Component;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
@@ -25,4 +24,5 @@ public class RecursoCriadoListener implements ApplicationListener<RecursoCriadoE
 					.buildAndExpand(codigo).toUri();
 			response.setHeader("Location", uri.toASCIIString());
 		}
+		
 }
