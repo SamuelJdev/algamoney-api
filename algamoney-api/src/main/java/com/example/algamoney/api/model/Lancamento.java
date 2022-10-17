@@ -25,10 +25,10 @@ public class Lancamento {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long codigo;
 	
-	@NotNull
+	@NotNull(message = "Campo Descrição é Obrigatório")
 	private String descricao;
 
-	@NotNull
+	@NotNull(message = "Campo Data Vencimento é Obrigatório")
 	@Column(name = "data_vencimento")
 	@JsonFormat(pattern =  "dd/MM/yyyy")
 	private LocalDate dataVencimento;
@@ -37,10 +37,10 @@ public class Lancamento {
 	@JsonFormat(pattern =  "dd/MM/yyyy")
 	private LocalDate dataPagamento;
 
-	@NotNull
+	@NotNull(message = "Campo Valor é Obrigatório")
 	private BigDecimal valor;
 
-	@NotNull
+	@NotNull(message = "Campo Observação é Obrigatório")
 	private String observacao;
 	
 	@NotNull
