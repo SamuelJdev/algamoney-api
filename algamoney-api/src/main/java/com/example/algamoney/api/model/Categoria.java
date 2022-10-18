@@ -27,22 +27,6 @@ public class Categoria {
 	@Size(min = 3, max = 20)
 	private String nome;
 	
-	public Long getCodigo() {
-		return codigo;
-	}
-
-	public void setCodigo(Long codigo) {
-		this.codigo = codigo;
-	}
-
-	public String getNome() {
-		return nome;
-	}
-
-	public void setNome(String nome) {
-		this.nome = nome;
-	}
-
 	@Override
 	public int hashCode() {
 		return Objects.hash(codigo);
@@ -59,9 +43,4 @@ public class Categoria {
 		Categoria other = (Categoria) obj;
 		return Objects.equals(codigo, other.codigo);
 	}
-
-	@Override
-	public String toString() {
-		return "Categorias [codigo=" + codigo + ", nome=" + nome + "]";
-	}	
 }
