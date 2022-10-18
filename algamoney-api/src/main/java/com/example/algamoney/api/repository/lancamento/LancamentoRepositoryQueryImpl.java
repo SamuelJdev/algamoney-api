@@ -11,7 +11,10 @@ import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Predicate;
 import javax.persistence.criteria.Root;
 
+import org.springframework.util.ObjectUtils;
+
 import com.example.algamoney.api.model.Lancamento;
+import com.example.algamoney.api.model.Lancamento_;
 import com.example.algamoney.api.repository.filter.LancamentoFilter;
 
 public class LancamentoRepositoryQueryImpl implements LancamentoRepositoryQuery{
