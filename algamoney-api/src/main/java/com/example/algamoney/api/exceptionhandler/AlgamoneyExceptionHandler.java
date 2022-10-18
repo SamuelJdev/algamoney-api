@@ -22,6 +22,9 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.context.request.WebRequest;
 import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExceptionHandler;
 
+import lombok.Getter;
+import lombok.Setter;
+
 @ControllerAdvice
 public class AlgamoneyExceptionHandler extends ResponseEntityExceptionHandler {
 
@@ -74,6 +77,8 @@ public class AlgamoneyExceptionHandler extends ResponseEntityExceptionHandler {
 		return erros;
 	}
 	
+	@Getter
+	@Setter
 	public static class Erro {
 		
 		private String mensagemUsuario;
@@ -84,13 +89,5 @@ public class AlgamoneyExceptionHandler extends ResponseEntityExceptionHandler {
 			this.mensagemDesenvolvedor = mensagemDesenvolvedor;
 		}
 
-		public String getMensagemUsuario() {
-			return mensagemUsuario;
-		}
-
-		public String getMensagemDesenvolvedor() {
-			return mensagemDesenvolvedor;
-		}
-		
 	}    
 }
